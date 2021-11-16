@@ -1,0 +1,16 @@
+= Background
+
+//include::../_head.adoc[]
+
+
+== Machine Learning
+
+=== Classification
+
+== Machine Translation
+
+Sample latex: \$ x_1 x_2 x_3 \$
+
+Sample citation cite:[gowda-may-2020-finding]
+
+

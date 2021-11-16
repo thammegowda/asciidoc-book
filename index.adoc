@@ -1,0 +1,40 @@
+= Book Title
+include::_head.adoc[]
+:leveloffset: +1
+//:docinfo2:
+//:hide-uri-scheme:
+//:source-highlighter: rouge
+
+[preface]
+include::chapters/00-preface.adoc[]
+
+[preface]
+include::chapters/00-abstract.adoc[]
+
+
+//Introduction
+
+include::chapters/10-intro.adoc[]
+
+//= First Part
+include::chapters/20-background.adoc[]
+
+
+
+//== Second Part
+//include::chapters/chapter3.adoc[]
+
+[colophon]
+//include::chapters/colophon.adoc[]
+include::chapters/yy-bibliography.adoc[]
+
+[appendix]
+include::chapters/zz-appendix.adoc[]
+
+ifdef::backend-docbook[]
+[index]
+Index
+-----
+endif::backend-docbook[]
+
+

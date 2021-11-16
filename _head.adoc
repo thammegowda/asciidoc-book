@@ -1,0 +1,48 @@
+:doctype: book
+:author: Thamme Gowda
+:orgname: University of Southern California
+:email: email@usc.edu
+:encoding: utf-8
+:lang: en
+:icons: font
+:icon-set: pf
+:toc:
+:revnumber: 1.0
+:revdate: Nov 1st, 2021
+:icons: font
+:data-uri:
+:sectnums:
+:sectnumlevels: 4
+:stem: 
+ifdef::backend-pdf[]
+:pdf-theme:my-pdf-theme
+//:pdf-themesdir: {docdir}
+//:title-logo-image: image:sample-banner.svg[pdfwidth=4.25in,align=center]
+:source-highlighter: rouge
+:rouge-style: github
+endif::[]
+
+
+// Plugin options: https://github.com/asciidoctor/asciidoctor-bibtex#configuration
+// See all styles https://github.com/citation-style-language/styles
+:bibtex-style: natbib-plainnat-author-date
+:bibtex-file: references.bib
+:bibtex-order: appearance
+:bibtex-format: asciidoc
+
+// .asciidoctorconfig
+
+ifdef::backend-html5[]
+++++
+<style type="text/css">
+body {
+    font-family: "Linux Libertine O", "Helvetica"
+}
+
+h1, h2, h3, h4, h5 {
+font-family: "Linux Libertine O", "Helvetica"
+}
+</style>
+++++
+endif::backend-html5[]
+//endif::attribsimported[]
