@@ -1,15 +1,17 @@
 = Asciidoctor Book
+:hide-uri-scheme:
+:toc:
+:sectnums: 
 
+This is a template repository for quick starting asciidoctor book.
 
-This is a template repository for quick starting asciidoctor book. 
+It has support for, latex and bibtex, making it a great choice for STEM books
 
-. Latex 
-. BibTex support
-
+> See a sample book at link:index.adoc[index.adoc]  and its HTML rendering at https://thammegowda.github.io/asciidoc-book/ 
 
 == Setup 
 
-Asciidoctor has tools in Java, Javascript, Ruby, and historically Python. At this time, much of the tools are in Ruby.  So we need to setup ruby environment properly.
+Asciidoc has tools in Java, Javascript, Ruby, and historically Python. At this time, much of the tools are in Ruby. So we need to setup ruby environment properly.
 
 .Install `rbenv` if not already found
 [source,bash]
@@ -26,32 +28,42 @@ gem install asciidoctor
 gem install rouge
 gem install asciidoctor-latex --pre      # this is for HTML
 gem install asciidoctor-bibtex
-gem install asciidoctor-indir_ext
 
-gem install asciidoctor-pdf
+# PDF support 
+# gem install asciidoctor-pdf
 # follow instructions on https://github.com/asciidoctor/asciidoctor-mathematical 
-gem install asciidoctor-mathematical      # for latex in PDF
+# gem install asciidoctor-mathematical      # for latex in PDF
 ----
 
-== Editor/IDE
+== Editor/IDE Choice
 
-* PyCharm with Asciidoctor extension
+* IntelliJ/PyCharm with Asciidoctor plugin
 * VS Code with Asciidoctor extension
 
 
 Both of them are great! I used to use PyCharm, but now I am considering VS Code, simply because https://github.com/asciidoctor/asciidoctor-intellij-plugin/issues/915#issue-1053008459[enabling extensions is easier than PyCharm's counterpart^].
 
-1. Cmd Pallet >  `Asciidoc: Change preview security settings`  > Allow everything (i.e.`Disable`)
+VS Code best settings for asciidoctor
 
-2. Settings > Asciidoc > 
+. Install VS Code and Asciidoc extension
+. Cmd Pallet >  `Asciidoc: Change preview security settings`  > Allow everything (i.e.`Disable` security). Without this latex will not render
+. Settings > Asciidoc > 
 
 .. Set "Full path for the asciidoctor binary/executable" as  `asciidoctor  -r asciidoctor-bibtex --trace`
 .. Disable asciidoctor-js so our above command is used to render html in live preview
+.. Without the above bibtex citations wont be rendered.
 
 
 == Build
 
-Just run 
 
-   ./make.sh
+[source,bash]
+asciidoctor index.adoc -o index.html --trace \
+  -r asciidoctor-bibtex 
 
+Alternatively,  run `./make.sh` which has above command
+
+
+== Known Issues
+
+. PDF creation with latex support is not working yet. It is theoretically possible TODO: write 
