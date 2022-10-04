@@ -11,15 +11,18 @@ It has support for, latex and bibtex, making it a great choice for STEM books
 
 == Setup 
 
-Asciidoc has tools in Java, Javascript, Ruby, and historically Python. At this time, much of the tools are in Ruby. So we need to setup ruby environment properly.
+Asciidoc has tools in Java, Javascript, Ruby, and historically Python. 
+At this time, much of the tools are in Ruby. So we need to setup ruby environment properly.
 
-.Install `rbenv` if not already found
+.Install `rbenv` if not already found.
 [source,bash]
+----
 brew install rbenv # or conda install rbenv
+# other platforms, follow instructions at https://github.com/rbenv/rbenv-installer 
 rbenv init
 rbenv install 2.7.4   # install this version 
 rbenv global 2.7.4    # activate env
-
+----
 
 .Install asciidoctor and its extensions:
 [source,bash]
